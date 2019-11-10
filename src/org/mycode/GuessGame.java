@@ -14,8 +14,11 @@ public class GuessGame {
     private static final String messageGuess = "You are right!";
     private static final String messageTrueNum = "True number is #";
     private static final String messageNumOfAttempts = "Number of your attempts is #";
-    private static final String messageChooseMenu = "\nWhat would you like to choose?\n1.Generate new random number\n2.Change bounds and generate new random number\nOr any symbol to exit game";
-
+    private static final String messageChooseMenu = "\n--- Сhoose menu ---";
+    private static final String messageChooseMenuP1 = "1.Generate new random number";
+    private static final String messageChooseMenuP2 = "2.Change bounds and generate new random number";
+    private static final String messageChooseMenuP3 = "Or any symbol to exit game";
+    
     private static Scanner scanner = new Scanner(System.in);
     private static int lbound, ubound;
     private static int attempt;
@@ -41,6 +44,9 @@ public class GuessGame {
                 System.out.println(messageTrueNum.replace("#", String.valueOf(randomNum)));
                 System.out.println(messageNumOfAttempts.replace("#", String.valueOf(attempt)));
                 System.out.println(messageChooseMenu);
+                System.out.println(messageChooseMenuP1);
+                System.out.println(messageChooseMenuP2);
+                System.out.println(messageChooseMenuP3);
                 switch (scanner.next()){
                     case "1":
                         generateRandomNum();
